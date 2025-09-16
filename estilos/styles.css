@@ -47,8 +47,6 @@ body{
 
 main{
     font-family: var(--fonte-principal);
-    position: relative;
-    overflow: hidden; /* corta o excesso do vídeo */
     background-color: aliceblue;
     height: 100vh;
      display: flex;            /* Ativa o flexbox */
@@ -85,6 +83,7 @@ h3{
 
 
 .imagens {
+    padding: 24px;
       display: flex;         /* coloca as imagens em linha */
       gap: 50px;             /* espaço entre elas */
       justify-content: center; /* centraliza no meio da tela */
@@ -106,6 +105,7 @@ h3{
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* adiciona sombra */
 }
 
+
 footer{
     background-color: rgb(0, 0, 0);
     font-family: var(--fonte-principal);
@@ -125,3 +125,4 @@ footer a {
 footer a:hover{
     color: purple;
 }
+
