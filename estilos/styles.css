@@ -2,23 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@400..900&family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
 
-
 :root {
-
     --fonte-principal: 'Cinzel';
     --cor1: black;
-
 }
-
 
 * {
-padding: 0px;
-margin: 0px;
-box-sizing: border-box;
-
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
 
-nav{
+/* ====== NAV ====== */
+nav {
     background-color: var(--cor1);
     text-align: center;
     padding: 15px;
@@ -26,94 +22,112 @@ nav{
     font-family: var(--fonte-principal);
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: white;
     font-weight: bolder;
 }
 
-nav a:hover{
+nav a:hover {
     color: purple;
 }
 
 nav li {
-  display: inline;    /* coloca um ao lado do outro */
-  margin-right: 20px; /* espaço entre eles */
+    display: inline;    /* coloca um ao lado do outro */
+    margin-right: 20px; /* espaço entre eles */
 }
 
-body{
-    background-color:black ;
+/* ====== BODY ====== */
+body {
+    background-color: black;
 }
 
-main{
+/* ====== MAIN ====== */
+main {
     font-family: var(--fonte-principal);
-    background-color: aliceblue;
+}
+
+/* ====== SEÇÃO PRINCIPAL ====== */
+#principal {
+    background-color: rgb(25, 40, 53);
     height: 100vh;
-     display: flex;            /* Ativa o flexbox */
+    display: flex;            /* Ativa o flexbox */
     justify-content: center;  /* Centraliza horizontalmente */
     align-items: center;      /* Centraliza verticalmente */
-    height: 100vh;            /* Faz o main ocupar 100% da altura da tela */
 }
 
-main h1{
+#principal h1 {
     text-align: center;
     font-size: 60px;
-    
 }
 
-main a{
+#principal a {
     text-decoration: none;
-    color:purple;
-
+    color: purple;
 }
 
-main a:hover{
+#principal a:hover {
     text-decoration: underline;
 }
 
-h3{
+/* ====== SEÇÃO SECUNDARIA====== */
+
+#secundario {
+    height: 100vh;
+    background: linear-gradient(  rgb(2, 2, 2), 
+        rgb(43, 41, 41), 
+        rgba(48, 46, 46, 0.712));
     color: aliceblue;
+}
+
+
+
+
+/* ====== SEÇÃO TERCIARIA ====== */
+#terciario h2, 
+#terciario h3 {
     font-family: var(--fonte-principal);
-    color: purple;
     text-align: center;
     padding: 40px;
     font-size: 28px;
+    color: purple;
+    height: 30vh;
 }
 
-
-
+/* ====== GALERIA ====== */
 .imagens {
     padding: 24px;
-      display: flex;         /* coloca as imagens em linha */
-      gap: 50px;             /* espaço entre elas */
-      justify-content: center; /* centraliza no meio da tela */
-      flex-wrap: wrap;       /* quebra linha se não couber */
-    }
+    display: flex;         /* coloca as imagens em linha */
+    gap: 50px;             /* espaço entre elas */
+    justify-content: center; /* centraliza no meio da tela */
+    flex-wrap: wrap;       /* quebra linha se não couber */
+}
 
 .img-container {
-      width: 200px;          /* largura fixa para cada imagem */
-    }
+    width: 200px;          /* largura fixa para cada imagem */
+}
 
 .img-container img {
-      width: 100%;           /* imagem ocupa 100% do container */
-      border-radius: 8px;    /* cantos arredondados (opcional) */
+    width: 100%;           /* imagem ocupa 100% do container */
+    border-radius: 8px;    /* cantos arredondados */
     display: block;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.img-container img:hover{
+.img-container img:hover {
     transform: scale(1.04); /* aumenta a imagem */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* adiciona sombra */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* adiciona sombra */
 }
 
-
-footer{
+/* ====== FOOTER ====== */
+footer {
     background-color: rgb(0, 0, 0);
     font-family: var(--fonte-principal);
     text-align: center;
     padding: 20px;
 }
 
-footer p{
+footer p {
     color: white;
 }
 
@@ -122,7 +136,35 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover{
+footer a:hover {
     color: purple;
 }
 
+.carrossel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.imagens {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 200px; /* cada card tem 200px */
+  gap: 40px;
+  animation: deslizar 20s linear infinite;
+}
+
+.img-container img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Animação contínua */
+@keyframes deslizar {
+  to {
+    transform: translateX(calc(-5 * (200px + 40px)));
+    /* move só a metade (5 imagens), 
+       as duplicadas entram no lugar, 
+       e quando reinicia não tem "tranco" */
+  }
+}
