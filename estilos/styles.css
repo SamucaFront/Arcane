@@ -49,7 +49,7 @@ nav li {
 
 /* ====== BODY ====== */
 body {
-    background-image: url('..img/arcane-season-2-ef-1920x1080.jpg');
+    background-image: url('../img/arcane-season-2-ef-1920x1080.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -81,24 +81,22 @@ body {
 
 /* Seção que contém o vídeo */
 #video-fundo {
-    position: relative;      /* Para controlar elementos sobrepostos */
+    position: relative;
     width: 100%;
-    height: 100vh;           /* Ocupa toda a altura da tela */
-    overflow: hidden;        /* Evita barras de rolagem */
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* Vídeo em si */
 #video-fundo .video-bg {
-    position: absolute;      /* Para ocupar toda a seção */
+    position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;             /* Largura total da seção */
-    height: 100%;            /* Altura total da seção */
-    object-fit: cover;       /* Mantém proporção e cobre toda a área */
-    transform: translate(-50%, -50%); /* Centraliza */
-    z-index: -1;             /* Fica atrás de outros elementos */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
 }
-
 
 /* ====== SEÇÃO SECUNDÁRIA ====== */
 #secundario {
@@ -108,17 +106,16 @@ body {
 }
 
 #secundario p {
-    max-width: 700px;      /* largura máxima do parágrafo */
-    text-align: left;      /* texto alinhado à esquerda dentro do bloco */
-    line-height: 1.5;      /* espaço entre linhas para melhor leitura */
+    max-width: 700px;
+    text-align: left;
+    line-height: 1.5;
 }
 
-
 #img-sc img {
-    width: 300px;          /* largura desejada */
-    height: 300px;         /* altura igual para ficar quadrada */
-    object-fit: cover;     /* mantém proporção e corta excesso */
-    border-radius: 8px;    /* cantos arredondados */
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
     display: block;
 }
 
