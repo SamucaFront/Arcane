@@ -1,0 +1,92 @@
+/* ====== Media Queries Responsivas ====== */
+
+/* ====== Celular (até 767px) ====== */
+@media screen and (max-width: 767px) {
+    #principal h1 {
+        font-size: 32px;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    #secundario p {
+        max-width: 90%;
+        margin: auto;
+        font-size: 0.9em;
+    }
+
+    #img-sc img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .img-container,
+    .img-container1 {
+        width: 150px;
+    }
+
+    .carrossel .imagens,
+    .carrossel1 .imagens {
+        grid-auto-columns: 150px;
+        gap: 20px;
+    }
+}
+
+/* ====== Tablet (768px até 992px) ====== */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    #principal h1 {
+        font-size: 48px;
+        padding: 0 20px;
+    }
+
+    #secundario p {
+        max-width: 700px;
+        font-size: 1em;
+        margin: auto;
+    }
+
+    #img-sc img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .img-container,
+    .img-container1 {
+        width: 180px;
+    }
+
+    .carrossel .imagens,
+    .carrossel1 .imagens {
+        grid-auto-columns: 180px;
+        gap: 30px;
+    }
+}
+
+/* ====== Desktop (a partir de 993px) ====== */
+@media screen and (min-width: 993px) {
+    #principal h1 {
+        font-size: 60px;
+        padding: 0 40px;
+    }
+
+    #secundario p {
+        max-width: 700px;
+        font-size: 1em;
+        margin: auto;
+    }
+
+    #img-sc img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .img-container,
+    .img-container1 {
+        width: 200px;
+    }
+
+    .carrossel .imagens,
+    .carrossel1 .imagens {
+        grid-auto-columns: 200px;
+        gap: 40px;
+    }
+}
