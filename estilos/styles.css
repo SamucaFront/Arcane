@@ -49,7 +49,7 @@ nav li {
 
 /* ====== BODY ====== */
 body {
-    background-image: url('/img/arcane-season-2-ef-1920x1080.jpg');
+    background-image: url('..img/arcane-season-2-ef-1920x1080.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
