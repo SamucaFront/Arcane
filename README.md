@@ -1,36 +1,36 @@
-#Arcane
+# Arcane �
 
-Uma homenagem ao universo de **Arcane** (série animada de League of Legends), com galeria de personagens, vídeo de fundo e carrosséis interativos.
+Uma homenagem ao universo de **Arcane** (série animada de League of Legends).  
+Galeria de personagens, vídeo de fundo e carrosséis interativos.  
 
----
-
-# Acesse o site
-
-(https://samucafront.github.io/Arcane/)
+> ⚠️ Projeto ainda em desenvolvimento.
 
 ---
 
-##Funcionalidades
+## 🔗 Visite
 
-- Menu fixo no topo com navegação fácil.
-- Vídeo de fundo na seção principal.
-- Galeria de imagens com efeitos de hover.
-- Carrossel de imagens animado.
+[Ver no GitHub Pages](https://samucafront.github.io/Arcane/)
 
 ---
 
-## Tecnologias Utilizadas
+## Funcionalidades
 
-- HTML5  
-- CSS3 
-- JavaScript 
-- Google Fonts
+- Menu fixo no topo  
+- Vídeo de fundo na seção principal  
+- Galeria interativa de imagens  
+- Carrossel animado  
 
 ---
 
-## Como rodar localmente
+## Tecnologias
 
-1. Clone o repositório:  
-   ```bash
-   git clone https://github.com/samucafront/Arcane.git
+HTML5 • CSS3 • JavaScript • Google Fonts
 
+---
+
+## Rodando localmente
+
+```bash
+git clone https://github.com/samucafront/Arcane.git
+cd Arcane
+# Abra index.html no navegador
