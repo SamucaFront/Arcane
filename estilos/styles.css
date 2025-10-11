@@ -7,19 +7,29 @@
     --cor1: black;
 }
 
+/* ====== RESET ====== */
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 /* ====== NAV ====== */
 nav {
-    background-color: var(--cor1);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     text-align: center;
     padding: 15px;
     font-size: 23px;
     font-family: var(--fonte-principal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 nav a {
@@ -33,27 +43,30 @@ nav a:hover {
 }
 
 nav li {
-    display: inline;    /* coloca um ao lado do outro */
-    margin-right: 20px; /* espaço entre eles */
+    display: inline;
+    margin-right: 20px;
 }
 
 /* ====== BODY ====== */
 body {
-    background-color: black;
-}
-
-/* ====== MAIN ====== */
-main {
+    background-image: url('/img/arcane-season-2-ef-1920x1080.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     font-family: var(--fonte-principal);
 }
 
 /* ====== SEÇÃO PRINCIPAL ====== */
 #principal {
-    background-color: rgb(25, 40, 53);
+    background-image: url('/img/arcane-season-22-awakening-ll-1920x1080.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 100vh;
-    display: flex;            /* Ativa o flexbox */
-    justify-content: center;  /* Centraliza horizontalmente */
-    align-items: center;      /* Centraliza verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #principal h1 {
@@ -63,68 +76,83 @@ main {
 
 #principal a {
     text-decoration: none;
-    color: purple;
+    color: rgb(255, 255, 255);
 }
 
 #principal a:hover {
     text-decoration: underline;
 }
 
-/* ====== SEÇÃO SECUNDARIA====== */
-
+/* ====== SEÇÃO SECUNDÁRIA ====== */
 #secundario {
-    height: 100vh;
-    background: linear-gradient(  rgb(2, 2, 2), 
-        rgb(43, 41, 41), 
-        rgba(48, 46, 46, 0.712));
+    height: auto;
+    background: linear-gradient(rgb(2, 2, 2), rgb(43, 41, 41), rgba(48, 46, 46, 0.712));
     color: aliceblue;
 }
 
+#secundario p {
+    max-width: 700px;      /* largura máxima do parágrafo */
+    text-align: left;      /* texto alinhado à esquerda dentro do bloco */
+    line-height: 1.5;      /* espaço entre linhas para melhor leitura */
+}
 
 
+#img-sc img {
+    width: 300px;          /* largura desejada */
+    height: 300px;         /* altura igual para ficar quadrada */
+    object-fit: cover;     /* mantém proporção e corta excesso */
+    border-radius: 8px;    /* cantos arredondados */
+    display: block;
+}
 
-/* ====== SEÇÃO TERCIARIA ====== */
-#terciario h2, 
+/* ====== SEÇÃO TERCIÁRIA ====== */
+#terciario h2,
 #terciario h3 {
     font-family: var(--fonte-principal);
     text-align: center;
     padding: 40px;
     font-size: 28px;
-    color: purple;
-    height: 30vh;
+    color: rgb(255, 255, 255);
 }
 
 /* ====== GALERIA ====== */
 .imagens {
     padding: 24px;
-    display: flex;         /* coloca as imagens em linha */
-    gap: 50px;             /* espaço entre elas */
-    justify-content: center; /* centraliza no meio da tela */
-    flex-wrap: wrap;       /* quebra linha se não couber */
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.img-container {
-    width: 200px;          /* largura fixa para cada imagem */
+/* Containers das imagens */
+.img-container,
+.img-container1 {
+    width: 200px;
 }
 
-.img-container img {
-    width: 100%;           /* imagem ocupa 100% do container */
-    border-radius: 8px;    /* cantos arredondados */
+.img-container img,
+.img-container1 img {
+    width: 100%;
+    border-radius: 8px;
     display: block;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.img-container img:hover {
-    transform: scale(1.04); /* aumenta a imagem */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* adiciona sombra */
+.img-container img:hover,
+.img-container1 img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* ====== FOOTER ====== */
 footer {
-    background-color: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     font-family: var(--fonte-principal);
     text-align: center;
     padding: 20px;
+    z-index: 1000;
 }
 
 footer p {
@@ -140,31 +168,38 @@ footer a:hover {
     color: purple;
 }
 
-.carrossel {
-  overflow: hidden;
-  width: 100%;
+/* ====== CARROSSEL ====== */
+.carrossel,
+.carrossel1 {
+    overflow: hidden;
+    width: 100%;
 }
 
-.imagens {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 200px; /* cada card tem 200px */
-  gap: 40px;
-  animation: deslizar 20s linear infinite;
+.carrossel .imagens,
+.carrossel1 .imagens {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 200px;
+    gap: 40px;
 }
 
-.img-container img {
-  width: 100%;
-  border-radius: 8px;
-  display: block;
+.carrossel .imagens {
+    animation: deslizar 20s linear infinite;
 }
 
-/* Animação contínua */
+.carrossel1 .imagens {
+    animation: deslizar-reverso 20s linear infinite;
+}
+
+/* ====== ANIMAÇÕES ====== */
 @keyframes deslizar {
-  to {
-    transform: translateX(calc(-5 * (200px + 40px)));
-    /* move só a metade (5 imagens), 
-       as duplicadas entram no lugar, 
-       e quando reinicia não tem "tranco" */
-  }
+    to {
+        transform: translateX(calc(-5 * (200px + 40px)));
+    }
+}
+
+@keyframes deslizar-reverso {
+    to {
+        transform: translateX(calc(5 * (200px + 40px)));
+    }
 }
