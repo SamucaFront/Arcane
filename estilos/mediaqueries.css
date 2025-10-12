@@ -42,24 +42,22 @@
 }
 
 /* ====== Tablet (768px até 992px) ====== */
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 650px) and (max-width: 800px) {
     #principal h1 {
         font-size: 48px;
         padding: 0 20px;
-       margin-left: 10%; /* afasta proporcionalmente à largura da tela */
     }
 
     #secundario p {
         max-width: 700px;
         font-size: 1em;
-        text-indent: 30px;
         margin: auto;
     }
 
     #img-sc img {
         width: 250px;
         height: 250px;
-        margin-left: 40px;
+        margin: 0 auto;
     }
 
     .img-container,
