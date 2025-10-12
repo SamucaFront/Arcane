@@ -15,6 +15,7 @@
 }
 
 /* ====== NAV ====== */
+
 nav {
     background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
@@ -30,8 +31,8 @@ nav {
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    
 }
-
 nav a {
     text-decoration: none;
     color: white;
@@ -104,6 +105,7 @@ body {
     height: auto;
     background: linear-gradient(rgb(2, 2, 2), rgb(43, 41, 41), rgba(46, 45, 45, 0.712));
     color: aliceblue;
+    padding: 20px;
 }
 
 #secundario p {
@@ -125,7 +127,7 @@ body {
 #terciario h3 {
     font-family: var(--fonte-principal);
     text-align: center;
-    padding: 40px;
+    padding: 10px;
     font-size: 28px;
     color: rgb(255, 255, 255);
 }
@@ -188,6 +190,7 @@ footer a:hover {
 .carrossel1 {
     overflow: hidden;
     width: 100%;
+    
 }
 
 .carrossel .imagens,

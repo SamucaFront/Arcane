@@ -8,15 +8,25 @@
         text-align: center;
     }
 
-    #secundario p {
+    #secundario h1{
+    text-align: center;
+    }
+
+    #secundario  p {
         max-width: 90%;
         margin: auto;
+        text-indent: 30px;
+
         font-size: 0.9em;
+        text-align: center;
     }
 
     #img-sc img {
         width: 200px;
         height: 200px;
+        display: block;
+        margin: 0 auto;
+        
     }
 
     .img-container,
@@ -36,17 +46,20 @@
     #principal h1 {
         font-size: 48px;
         padding: 0 20px;
+       margin-left: 10%; /* afasta proporcionalmente à largura da tela */
     }
 
     #secundario p {
         max-width: 700px;
         font-size: 1em;
+        text-indent: 30px;
         margin: auto;
     }
 
     #img-sc img {
         width: 250px;
         height: 250px;
+        margin-left: 40px;
     }
 
     .img-container,
@@ -63,15 +76,19 @@
 
 /* ====== Desktop (a partir de 993px) ====== */
 @media screen and (min-width: 993px) {
+
+    
     #principal h1 {
         font-size: 60px;
         padding: 0 40px;
+    
     }
 
     #secundario p {
         max-width: 700px;
         font-size: 1em;
-        margin: auto;
+        text-indent: 30px;
+
     }
 
     #img-sc img {
